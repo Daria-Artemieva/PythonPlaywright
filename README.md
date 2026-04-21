@@ -1,75 +1,67 @@
-# PytestPython
+# Playwright Automation Framework (Python)
 
-Sample automation project built with `pytest` and `Playwright`, including:
+## 📌 About
 
-- UI tests
-- API tests
-- end-to-end API + UI scenarios
-- BDD scenarios with `pytest-bdd`
+This project is a UI test automation framework built using **Playwright and Python**.
+It demonstrates core automation capabilities, clean test structure, and maintainable approach to UI testing.
 
-## Project Structure
+---
 
-- `playwright/` - main Playwright tests, page objects, API utilities, and test data
-- `playwright/page_objects/` - page object classes
-- `playwright/utils/` - helper classes for API interactions
-- `playwright/data/credentials.json` - test credentials
-- `playwright/Features/` - BDD feature files
-- `pytest_dir/` - separate basic pytest examples
-- `pytest.ini` - pytest configuration and markers
+## ⚙️ Tech Stack
 
-## Included Tests
+* Python
+* Playwright
+* Pytest
 
-- `playwright/test_playwright_basics.py` - basic UI checks and browser usage examples
-- `playwright/test_ui_validation_1.py` - UI scenarios with products and popup window handling
-- `playwright/test_web_api.py` - e2e flow: create order via API and validate it in UI
-- `playwright/test_framework_web_api.py` - e2e flow using page objects and parametrization
-- `playwright/test_framework_web_api_bdd.py` - BDD version of the e2e scenario
-- `playwright/test_api_create_order.py` - standalone API test for order creation
+---
 
-## Installation
+## 🧪 Features
 
-Create and activate a virtual environment, then install dependencies:
+* Cross-browser testing (Chromium, Firefox, WebKit)
+* Built-in auto-waiting (no hard sleeps)
+* Scalable and maintainable test structure
+* Reusable fixtures and test setup
+
+---
+
+## 🏗 Architecture
+
+* Tests are structured for readability and scalability
+* Separation of test logic and setup
+* Usage of fixtures for browser and context management
+* Designed with maintainability in mind
+
+---
+
+## 🔍 Test Design Approach
+
+* Covers positive and negative scenarios
+* Focus on UI validation and user behavior
+* Considers edge cases and error handling
+
+---
+
+## 🚀 How to run
 
 ```bash
-pip install pytest playwright pytest-bdd
-playwright install
-```
-
-## Running Tests
-
-Run all tests:
-
-```bash
+pip install -r requirements.txt
 pytest
 ```
 
-Run only Playwright tests:
+---
 
-```bash
-pytest playwright
-```
+## 💡 Notes
 
-Run the standalone API test:
+This project reflects my approach to building stable and maintainable UI automation using Playwright.
+It focuses on clean structure, reliability, and reducing flaky tests.
 
-```bash
-pytest playwright/test_api_create_order.py -q
-```
+---
 
-Run smoke tests:
+## 🔄 Future Improvements
 
-```bash
-pytest -m smoke
-```
+* Add CI integration (GitHub Actions / Jenkins)
+* Extend test coverage
+* Add reporting (Allure)
+* Parameterize test data
 
-Select a browser:
-
-```bash
-pytest playwright --browser_name=chrome
-pytest playwright --browser_name=firefox
-```
-
-## Notes
-
-- The tests use the external site `https://rahulshettyacademy.com`, so internet access is required.
-- Test credentials are stored in `playwright/data/credentials.json`.
-- In `playwright/conftest.py`, the browser is launched with `headless=False`.
+---
